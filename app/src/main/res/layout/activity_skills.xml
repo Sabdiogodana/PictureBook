@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF8473"
+    tools:context=".SkillsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="112dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="132dp"
+        android:backgroundTint="#B32233"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSecond"
+        android:layout_width="112dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#B32233"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPrevious"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+        app:layout_constraintTop_toTopOf="@+id/btnPrevious" />
+
+    <ImageView
+        android:id="@+id/imgSkill"
+        android:layout_width="342dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/skill" />
+
+    <TextView
+        android:id="@+id/tvSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="I have skills in The following areas"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvKotlin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvKotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="Kotlin"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPython" />
+
+    <TextView
+        android:id="@+id/tvPython"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Python"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvJavascript"
+        app:layout_constraintStart_toEndOf="@+id/tvKotlin"
+        app:layout_constraintTop_toTopOf="@+id/tvJavascript" />
+
+    <TextView
+        android:id="@+id/tvJavascript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="32dp"
+        android:text="Javascript"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPython" />
+</androidx.constraintlayout.widget.ConstraintLayout>
